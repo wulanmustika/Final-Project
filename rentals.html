@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Transactions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rental Transactions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rental.html">Rental Transactions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rental-transactions">
+            <h2>All Rental Transactions</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Customer</th>
+                        <th>Item</th>
+                        <th>Rental Date</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transactions-table">
+                    <!-- Transaksi rental akan ditambahkan melalui JavaScript -->
+                </tbody>
+            </table>
+
+            <button class="add-btn" onclick="addTransaction()">Add New Rental</button>
+        </section>
+
+        <!-- Modal for Add Rental -->
+        <div id="add-rental-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeAddRentalForm()">&times;</span>
+                <h2>Add New Rental</h2>
+                <form id="add-rental-form">
+                    <label for="customer-name">Customer Name</label>
+                    <input type="text" id="customer-name" name="customer-name" required>
+
+                    <label for="item-name">Item Name</label>
+                    <input type="text" id="item-name" name="item-name" required>
+
+                    <label for="rental-date">Rental Date</label>
+                    <input type="date" id="rental-date" name="rental-date" required>
+
+                    <label for="return-date">Return Date</label>
+                    <input type="date" id="return-date" name="return-date" required>
+
+                    <button type="submit" class="rent-btn">Add Rental</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; ZH@BRYN Computer. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
